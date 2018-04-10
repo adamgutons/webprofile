@@ -2,7 +2,7 @@
 
 ## 
 
-This is how I managed to get these files to GitHub...it is essential that I log this process.  During my work with Eric, we often find ourselves wading through rivers of git (and other useful) code, with great success!  Only to find that we need to repeat these processes and are without any documentation.   Great civilizations were built on passing written record!
+This is how I managed to get these files to GitHub...it is essential that I log this process.  During my work with Eric, I often find myself wading through rivers of git (and other useful) code, with great success!  Only to find that I need to repeat these processes and are without any documentation.   Great civilizations were built on passing written record!
 
 1.) Enter Git bash and access the local project directory
 > cd Desktop/WebProfil_NEW/
