@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|VT323" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="data_proj_style.css">
+        <title>Adam Gutonski</title>
+        <meta charset="windows-1252">
+        <!-- this is the best meta tag I have found for 
+        cross-platfrom optimization -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="..\..\index.html">Home</a></li>
+                <li><a href="https://github.com/adamgutons" target="_blank">GitHub</a></li>  
+                <li><a href="..\.\projects.html">Projects</a></li>
+                <li><a href="mailto:adamgutons@gmail.com" target="_blank">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/adam-gutonski-scpm-207b0386/" 
+                       target="blank">LinkedIn</a></li>
+                <li><a href="..\..\resume\Newest_Resume_Adam.pdf" target="_blank">Resume</a></li>       
+                <li><img src=".\image\face.jpg"></li>
+            </ul>
+        </div>
+        <div class="maincontainer">
+           
+            
+        
+            
+            <div class="texttest">
+                <article>Comparing the Number of Driver-added Stickers on 
+                    Automobiles in Two Separate Parking Lot
+                    </article>
+            </div> 
+            
+            <div class="textTest2">
+                
+                <div class="lotIcon">
+                    <a href="Excel_Tables\pghCarLotData.xlsx"
+                    target="_blank">
+                           <i class="material-icons">description</i>
+                           Pittsburgh Lot Data
+                       </a>
+                </div>
+                <div class="lotIcon2">
+                    <a href="Excel_Tables\CCACLotData.xlsx"
+                    target="_blank">
+                           <i class="material-icons">description</i>
+                           CCAC Lot Data
+                       </a>
+                </div>
+                
+    <p>----------------------------------</p>            
+    <p> 
+    For our study of basic data gathering and manipulation, we decided to observe samples of automobiles in a CCAC parking lot
+    and a public grocery store parking lot in Pittsburgh Pennsylvania.  Specifically, we counted the number of driver-added stickers on each automobile.
+    In total we made 30 vehicle observations per parking lot.  We counted every fourth car, starting from the first parking space at the entrance of each lot.
+    </p>
+
+    <p>
+    Our definition of “driver-added sticker” counted any sticker placed on the car.  Position did not matter, meaning that the sticker could be placed
+    anywhere on the body of the vehicle.  We excluded any factory, emissions, registration, any legally required stickers/tags, as well as any dealership branding.
+    We wanted to capture the number of times that a car owner placed a sticker on their vehicle that included any imagery, business promotion, school name or
+    parking pass, text, political and religious identifiers, etc.
+    </p>
+
+    <p>
+    Our data categories are the “car observation number”, “make”, “model”, “category”, and “number of stickers”.  To simplify our data, we refined the 
+    make/model classes to four specific body type categories.  The make/model data allowed us to identify body styles via Google searches.  These included a “Truck”
+    category, which represents any vehicle with an open flatbed (covered or otherwise) and tailgate door.  The “SUV” category represents any sport utility vehicle.
+    The “Sedan” category represents any other four door car or hatchback, and the “Coupe” category represents any two-door vehicles.  The first two data tables represent an
+    individual parking lot and show the total number of driver-added stickers per car, the average stickers per car, least/most amount of stickers on a given category,
+    the total stickers per category, and the standard deviation.  The third data table contains a scatter plot of the data and shows the data correlation value of ~0.080.
+    </p>  
+
+    <p>
+    The first question posed was ‘Will a college campus have more bumper stickers per car than a public shopping space?’ We expected that a college campus would
+    have more total stickers, but the correlation value tells us that there is no relation between the amount of driver-added stickers at a college parking lot and a
+    grocery store.  Next we wondered, ‘Of the four body type categories, will a particular body style have more or less stickers?’Our hypothesis was that the
+    “Truck” and “SUV” class will have more driver added stickers and the “Coupe” class will have the least.  The =max function shows us that in the CCAC lot, the vehicle
+    with the most driver-added stickers was a Ford 4x4 in the “Truck” category with a total of 21.  The =max also shows a “Truck” style Dodge Ram in the Pittsburgh lot,
+    with the most driver-added stickers at a total of 8.
+    </p>
+
+    <p>
+    Reflecting on our study, we see that there was opportunity to collect more insightful and revealing data. 
+    This would also require a greater sample size than what we used.  With a greater sample size, we believe that there would be a substantial 
+    negative correlation between the CCAC parking lot sticker number and the Pittsburgh lot.  Meaning, as the number increases for driver-added stickers
+    at the Pittsburgh lot, the number of stickers will decrease in the CCAC lot.  We would want to create a field for tracking types/styles of driver-added
+    stickers to see if there was any regional, political, religious, or other type of driver-added sticker that could explain the negative correlation
+    (if it in fact was negative).
+    </p>
+    
+    <!-- BEGIN EMBEDDED CODE FROM PIKTOCHART PROJECT -->
+    <div class="piktowrapper-embed" style="height: 200; position: relative;" data-uid="24912094-cit115-data-project"><div class="pikto-canvas-wrap"><div class="pikto-canvas"><div class="embed-loading-overlay" style="width: 100%; height: 100%; position: absolute; text-align: center;"><img width="40px" alt="Loading..." style="margin-top: 100px" src="https://create.piktochart.com/loading.gif"/><p style="margin: 0; padding: 0; font-family: Lato, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 16px">Loading...</p></div></div></div></div><script>(function(d){var js, id="pikto-embed-js", ref=d.getElementsByTagName("script")[0];if (d.getElementById(id)) { return;}js=d.createElement("script"); js.id=id; js.async=true;js.src="https://create.piktochart.com/assets/embedding/embed.js";ref.parentNode.insertBefore(js, ref);}(document));</script>
+    <!-- END EMBEDDED CODE FROM PIKTOCHART PROJECT -->
+    
+            </div>
+                
+            
+               
+            </div>
+            
+        
+        
+    </body>
+</html>

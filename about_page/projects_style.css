@@ -1,0 +1,139 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 5, 2017, 10:41:32 PM
+    Author     : Adam
+*/
+
+body {
+   width:800px;
+        margin-left:auto;
+        margin-right:auto;
+    
+}
+
+div.maincontainer {
+        width:600px;
+        height: 900px;
+        margin-left:auto;
+        margin-right:auto;
+        font-family: 'VT323', monospace;
+        color: black;
+        transform: translateX(70px);
+        
+}
+
+h1 {
+    font-family: 'Open Sans', cursive;
+    color: black;
+    text-align: center;
+    font-size: 100px;
+}
+h2 {
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    transform: translateY(-50px);
+}
+div.navbar ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0px;
+    overflow: hidden;
+    position: fixed;
+    
+}
+
+div.navbar li {
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    text-align: center;
+    width: 25%;
+     background-color: #e5e5e5;
+}
+
+div.navbar li img{
+  max-height: 50%;
+  max-width: 50%;
+  text-align: center;
+  margin-top: 15px;
+  transform: translateY(-20px);
+  border: solid black 1px;
+}
+
+div.navbar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size:40px;
+    background-color: #e5e5e5;
+   
+}
+
+div.navbar li a:hover {
+    background-color: #111111;
+    opacity: .25;
+    color: white;
+}
+
+div.navbar li a:active {
+    color: blue;
+    background-color: red;
+}
+
+div.texttest {
+    font-size: 50px;
+    overflow: hidden;
+    background-color:#e5e5e5;
+    border: 1px solid black;
+}
+
+div.textTest2 {
+    font-size: 20px;
+    
+    font-family: 'VT323', monospace;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width:600px;
+        height: 400px;
+        margin-left:auto;
+        margin-right:auto;
+}
+em{
+    color:  #808080; 
+}
+article.summary {
+    margin-top: 15px;
+}
+article.summary {
+    list-style-type: none;
+    font-size: 25px;
+}
+article.summary a{
+    text-decoration: none;
+    color: black;
+}
+article.summary i {
+    float: right;
+}
+div.dataproj {
+    margin-top: 15px;
+}
+div.dataproj i {
+    transform: translateX(-335px);
+}
+div.methodsproj i {
+    transform: translateX(-345px);
+}
+div.langproj i{
+    transform: translateX(-225px);
+}
+div.bidproj i {
+    transform: translateX(-305px);
+}
