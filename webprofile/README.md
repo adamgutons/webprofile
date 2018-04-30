@@ -24,3 +24,14 @@ This is how I managed to get these files to GitHub...it is essential that I log 
   
 6.) Push the files/changes from local repository to GitHub remote repo specified as the origin
 > "git push origin master"
+
+I needed to log this struggle...creating a branch and pushing it to Git
+
+1.) git checkout -b [branch_name]  
+> This creates a new branch
+
+2.) git remote add origin [repository_url]
+> creates a remote destination for the push of local directory
+
+3.) git push origin [branch_name]
+> pushes the local repository branch to the remote origin
