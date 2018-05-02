@@ -24,3 +24,25 @@ This is how I managed to get these files to GitHub...it is essential that I log 
   
 6.) Push the files/changes from local repository to GitHub remote repo specified as the origin
 > "git push origin master"
+
+I needed to log this struggle...creating a branch and pushing it to Git
+
+1.) git checkout -b [branch_name]  
+> This creates a new branch
+
+2.) git remote add origin [repository_url]
+> creates a remote destination for the push of local directory
+
+3.) git push origin [branch_name]
+> pushes the local repository branch to the remote origin
+
+And this is how I am able to git checkout
+
+1.) git pull origin ProfileEditing
+> incorporates changes from a remote repository to current branch, runs git fetch w/ parameters and calls git merge to merge    > the retrieved banch heads into the current branch 
+
+2.) git checkout master
+> checks out of ProfileEditing branch to master branch
+
+3.) git status
+> should show on checked out branch
