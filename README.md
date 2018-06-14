@@ -37,8 +37,10 @@ I needed to log this struggle...creating a branch and pushing it to Git
 > pushes the local repository branch to the remote origin
 
 And this is how I am able to git checkout
+
 NOTE: IF YOU CREATE A NEW BRANCH on a local repository, and after incorporating it to the remote, you wish to bring the NEW branch to a DIFFERENT local repository, you must first run [git fetch origin]
-1.) git pull origin ProfileEditing
+
+1.) git pull origin ProfileEditing - (see above, pull will NOT retrieve branches created from different locals)
 > incorporates changes from a remote repository to current branch, runs git fetch w/ parameters and calls git merge to merge    > the retrieved banch heads into the current branch 
 
 2.) git checkout master
