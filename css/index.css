@@ -9,11 +9,12 @@ and open the template in the editor.
 */
 
 #navbar-override {
-    background-color: #abb;
+    background-color:  #dae6ef;
 }
 /*this > points through the different elements to change the font color for <a>*/
 #myNavbar > ul > li > a {
     color: black;
+    margin-top: 5px;
 }
 #face-override{
     margin-top: 10px;
