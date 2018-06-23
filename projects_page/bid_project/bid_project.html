@@ -6,32 +6,33 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|VT323" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../../css/bid_style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Adam Gutonski</title>
-        <meta charset="windows-1252">
-        <!-- this is the best meta tag I have found for 
-        cross-platfrom optimization -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
-        <div class="navbar">
-            <ul>
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="https://github.com/adamgutons" target="_blank">GitHub</a></li>  
-                <li><a href=".././projects.html">Projects</a></li>
-                <li><a href="mailto:adamgutons@gmail.com" target="_blank">Email</a></li>
-                <li><a href="https://www.linkedin.com/in/adam-gutonski-scpm-207b0386/" 
-                       target="blank">LinkedIn</a></li>
-                <li><a href="../../resume/Newest_Resume_Adam.pdf" target="_blank">Resume</a></li>       
-                <li><img src="../../image/face.JPG"></li>
-            </ul>
-        </div>
-        <div class="maincontainer">
+        <nav class="nav navbar" id="navbar-override">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+
+                </button>
+                <div class="navbar-left"><img src="../../image/face_fit2.JPG" id="face-override"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href ="../../index.html">Home</a></li>
+                    <li><a href ="../projects.html">Projects</a></li>
+                    <li><a href="https://github.com/adamgutons" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:adamgutonski@protonmail.com" target="_new">E-mail</a></li>
+                </ul>
+            </div>
+        </nav>  
            
             
         
