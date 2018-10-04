@@ -1,14 +1,57 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+This is free to whoever can use it.  I wrote this with help from Jon Duckett, w3schools, 
+mozilla webdev docs, CCAC, and others.  As of today, October 3 2018 I am fraggin'
+proud of the @keyframes that I wrote to move icons around.  holler for a doller because
+javascript can suck it...just kidding it's neat but I can not find any time to learn it.
+Please send any suggestions to adamgutonski@protonmail.com
 */
 /* 
-    Created on : Nov 5, 2017, 10:41:32 PM
-    Author     : Adam Gutonski
+October 3, 2018 10:31 pm
+Author     : Adam Gutonski
 */
-
-#navbar-override {
-    color: #FFFFFF;
-    background-color: #abb;
+@keyframes movedatbitch {
+    from {transform: none; opacity: 1;}
+    to {transform: rotate(360deg); opacity: .5;}
+}
+body {
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, Verdana, sans-serif;
+}
+#feature, #header, #footer, #col1, #col2, #col3 {
+    text-align: center;
+}
+#content {overflow: auto;}
+#about, #feature, #footer {
+    margin: 1%;
+}
+#col1, #col2, #col3 {
+    width: 31.3%;
+    float: left;
+    margin: 1%;
+}
+.col3 {margin-right: 0%;}
+#about, #footer {
+    background-color: #efefef;
+    padding: 0.5em 0;
+}
+#feature, #col1, #col2, #col3 {
+    height: 10em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+}
+#feature > img {
+    width: 100%;
+    height: 160px;
+}
+#col1 > a {
+    text-decoration: none;
+    color: inherit;
+}
+#col1 > i {
+    font-size: 100px;
+}
+#col1 > i:hover {
+    animation-name: movedatbitch;
+    animation-duration: 5s;
 }
