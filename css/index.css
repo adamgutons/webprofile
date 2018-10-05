@@ -30,7 +30,7 @@ Author     : Adam Gutonski
     }
 }
 body {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     font-family: Arial, Verdana, sans-serif;
 }
@@ -48,13 +48,11 @@ body {
 }
 .col3 {margin-right: 0%;}
 #about, #footer {
-    background-color: #efefef;
     padding: 0.5em 0;
 }
 #feature, #col1, #col2, #col3 {
     height: 10em;
     margin-bottom: 1em;
-    background-color: #efefef;
 }
 #feature > img {
     width: 100%;
