@@ -13,6 +13,22 @@ Author     : Adam Gutonski
     from {transform: none; opacity: 1;}
     to {transform: rotate(360deg); opacity: .5;}
 }
+@media screen and (max-width: 320px) {
+    .material-icons.md-48 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 799px){
+    .material-icons.md-48 {
+        font-size: 50px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .material-icons.md-48 {
+        font-size: 100px;
+    }
+}
 body {
     width: 70%;
     margin: 0 auto;
@@ -47,9 +63,6 @@ body {
 #col1 > a {
     text-decoration: none;
     color: inherit;
-}
-#col1 > i {
-    font-size: 100px;
 }
 #col1 > i:hover {
     animation-name: movedatbitch;
