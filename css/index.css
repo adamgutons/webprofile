@@ -68,22 +68,48 @@ body {
     animation-name: movedatbitch;
     animation-duration: 5s;
 }
+/***********************************/
 /*Begin CSS specific to python.html*/
-#project1  {
+/***********************************/
+#pythProj1, #pythProj2  {
     width: 99%;
     margin: 1%;
 }
-#project1 > p {
+#pythProj1 > p {
     
 }
 /*Best formatting i have found for keeping images centered*/
-#project1 > img {
+#pythProj1 > img {
     display: block;    
     margin-left: auto;
     margin-right: auto;
     max-width: 100%; 
 }
-#project1 > a {
+#pythProj1 > a {
+    text-decoration: none;
+    color: inherit;
+}
+/**************************************/
+/*Begin CSS specific to java/java.html*/
+/**************************************/
+#javaAbout > h3 > a {
+    color: inherit;
+}
+#javaProj1  {
+    width: 99%;
+    margin: 1%;
+}
+#javaProj1 > p {
+    
+}
+/*Best formatting i have found for keeping images centered*/
+#javaProj1 > img {
+    display: block;    
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; 
+}
+#javaProj1 > a {
     text-decoration: none;
     color: inherit;
 }
