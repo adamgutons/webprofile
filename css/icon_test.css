@@ -9,7 +9,14 @@ Please send any suggestions to adamgutonski@protonmail.com
 October 3, 2018 10:31 pm
 Author     : Adam Gutonski
 */
-
+@keyframes moveIt {
+    50% {transform: translateY(100px);}
+    100% {transform: translateY(0px);}
+}
+@keyframes slowDrip {
+    from {top: 0px;}
+    to {top: 200px;}
+}
 @media screen and (max-width: 320px) {
     .material-icons.md-48 {
         color: blue;
@@ -28,5 +35,7 @@ Author     : Adam Gutonski
         font-size: 100px;
     }
 }
-.material-icons.md-48 {
+#name > i:hover {
+    animation-name: moveIt;
+    animation-duration: 3s;
 }

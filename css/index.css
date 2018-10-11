@@ -13,6 +13,10 @@ Author     : Adam Gutonski
     from {transform: none; opacity: 1;}
     to {transform: rotate(360deg); opacity: .2;}
 }
+@keyframes slowDrip {
+    0% {top: 0px;}
+    100% {top: 200px;}
+}
 @media screen and (max-width: 320px) {
     .material-icons.md-48 {
         font-size: 24px;
