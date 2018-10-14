@@ -105,11 +105,9 @@ and open the template in the editor.
                 the file data to a dictionary object, and return the object to a variable in <i>main()</i>
                 named <i>dictFromCgCap</i>.  The particular JSON file that we are using was obtained from
                 <a href="https://data.wprdc.org/dataset/capital-projects" target="_blank">WPRDC</a> and contains property 
-                data collected from the Pittsburgh PA region.
-                This is the essential piece of the program.  Python allows us to convert the JSON file
-                to a dictionary object that we can iterate through and parse the data.  With a dictionary object
-                to pass around, it is then sent to the <i>AssembleAllLists()</i> method. If the dictionary
-                object is the essential piece (or <i>key</i> if we are being meta) to the script, the
+                data collected from the Pittsburgh PA region.This is the essential piece of the program.  Python allows us to convert the JSON file
+                to a dictionary object that we can iterate through and parse the data.  The dictionary object is then sent to the 
+                <i>AssembleAllLists()</i> method. If the dictionary object is the essential piece (or <i>key</i> if we are being meta) to the script, the
                 <i>AssembleAllLists()</i> method is the work-horse.  This method takes in the dictionary object
                 as an argument.  First it generates three list objects that will be passed into other script methods
                 via diciontary iteriation by the key <i>'features'</i>.  This key comes directly from the converted 
@@ -117,6 +115,39 @@ and open the template in the editor.
                 which contains the data we want.  This is a neat way to dig into diciontaries that are nested within other 
                 dictionaries.</p>
             <img src="../image/json_code3.jpg">
+            <p>
+                There are a few utility methods that work to extract data from the converted JSON.  The AssembleList() methods
+                will take in the 'properties' dictionary from dictFromCgCap, as well as an empty list.  From the 'properties', each assemble 
+                method will append items from 'area', 'status', and 'asset_type'.  The reason for extracting the values from these dictionaries was
+                to create a searchable list for the user.  After the items have been extracted from the 'area', 'status', and 'asset_type' lists, they are
+                passed to createUniqueLists().  This simple method takes in a list, passes it to the built-in set() method which will refine a set of unique values/objects,
+                and then pass this set to the built-in list() method to have a unique list.  The reason for compiling this list, is so that it can be assmbled into a 
+                new dictionary in the main method, called <i>bigSearchDict</i>.  Again, this dicitionary will be used to compare and search values in the 
+                JSON file.  Here is some output to make sense of things...</p>
+            <img src="../image/python_json_working1.jpg">
+            <p>
+                The user is first prompted to search for the 'area', 'status', or 'asset_type'.  The AssembleAllLists() method will create the unique search values for each of the 
+                three criteria.  In the example, the user enters 'area' and is prompted with four different 'area' types to search by.  One of the draw backs to the program is the brittle
+                nature of the user entry.  The program is unforgiving, and user entry must be case sensitive and exact with spelling.  I wrapped the 
+                main methods in try/except to mitigate some constant frustration when the user enters an extra space or character.  Once the user enters both search criteria, the program will
+                print out "JSON file written..." when successful.
+            </p>
+            <img src="../image/python_json_working2.jpg">
+
+            <hr>
+            <h3>Takeaways</h3>
+            <p>
+                Here is the contents of the 'new_data.txt' file which the JSON module uses to dump the data collected by the program, as specified by the user search criteria.
+                We see what looks to be a Python dictionary, but it is a Javascript object.  The first object property is "Facility Improvement" whose property value is a another Javascript object.
+                The second object contains two properties, "budgeted_amount" and "id".  Their property values are lists containg the budget amounts and id numbers from our user search (collected from the CGCapitalProject JSON file).
+            </p>
+            <img src="../image/json_code4.jpg">
+            <img src="../image/json_code5.jpg">
+            <p>
+            I'm somehwat happy with this little script. It took some tinkering and I am not done yet.  I did not get a chance to feed the JSON file that the user collects,
+            back in to the program. An option for the assignment was to use a JSON file to search the larger data structure, and return some interesting stats such as average budgeted amount per status or area.
+            I like that the script is methodized.  I do not like the large 'options' string variable that gums up the enterSearchCrtieria() method.  Stay tuned for more...
+            </p>
             <a href="#header" title="No really, why would I lie?"><i class="material-icons md-12">arrow_upward</i>Back to top</a>
         </div>
         <div id="footer">
