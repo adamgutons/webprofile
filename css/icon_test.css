@@ -9,6 +9,11 @@ Please send any suggestions to adamgutonski@protonmail.com
 October 3, 2018 10:31 pm
 Author     : Adam Gutonski
 */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
+}
+
 @keyframes moveIt {
     50% {transform: translateY(100px);}
     100% {transform: translateY(0px);}
@@ -17,6 +22,7 @@ Author     : Adam Gutonski
     from {top: 0px;}
     to {top: 200px;}
 }
+
 @media screen and (max-width: 320px) {
     .material-icons.md-48 {
         color: blue;
@@ -35,7 +41,16 @@ Author     : Adam Gutonski
         font-size: 100px;
     }
 }
-#name > i:hover {
-    animation-name: moveIt;
+#name > i {
+    animation-name: fadeIn;
     animation-duration: 3s;
 }
+.moveMe {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+/*#name > i:hover {
+    animation-name: moveIt;
+    animation-duration: 3s;
+}*/

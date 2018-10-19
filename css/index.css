@@ -8,6 +8,11 @@ Please send any suggestions to adamgutonski@protonmail.com
 October 3, 2018 10:31 pm
 Author     : Adam Gutonski
 */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
+}
+
 @keyframes moveIt {
     from {transform: none; opacity: 1;}
     to {transform: rotate(360deg); opacity: .2;}
@@ -36,8 +41,13 @@ body {
     width: 90%;
     margin: 0 auto;
     font-family: Arial, Verdana, sans-serif;
+    
 }
-#feature, #header, #footer, #col1, #col2, #col3,
+#mainContainer{
+    animation-name: fadeIn;
+    animation-duration: 6s;
+}
+#feature, #header, #about, #footer, #col1, #col2, #col3,
 #col4, #col5, #col6 {
     text-align: center;
 }
