@@ -137,3 +137,15 @@ body {
     text-decoration: none;
     color: inherit;
 }
+/**************************************/
+/*Begin CSS specific to bib/bibliography.html*/
+/**************************************/
+#bibContent {
+    width: 93%;
+    float: left;
+}
+#bibFooter {
+    width: 93%;
+    float: left;
+    text-align: center;
+}
