@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+This is free to whoever can use it.  I wrote this with help from Jon Duckett, w3schools, 
+mozilla webdev docs, CCAC, and others.  10/3/18 -- the @keyframes that I wrote to move icons around. 
+is not in spite of javascript...time constraints have prevented me from effectively learning JS.
+Please send any suggestions to adamgutonski@protonmail.com
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>Adam Gutonski</title>
+    </head>
+
+    <body>
+        <div id="header">
+            <h1>JavaScript</h1>
+         </div>
+        <div id="jsMainContainer">
+            <div id="about">
+                <h2>Practicing with JavaScript</h2>
+            </div>
+       
+        <div id="content">
+            <div id="col1">
+                <p>Home</p>
+                <a href="../index.html"><i class="material-icons md-48">home</i></a><!--<a href="none">JSON Project</a>-->
+            </div>
+            <div id="col2">
+                <p>Java</p>
+                <a href="../projects_page/java/java.html"><i class="material-icons md-48">autorenew</i></a>
+            </div>
+            <div id="col3">
+                <p>Python</p>
+                <a href="../projects_page/python.html"><i class="material-icons md-48">autorenew</i></a>
+            </div>
+            
+        </div>
+        <div id="content2">
+            <div id="col4">
+                <p>GitHub</p>
+                <a href="https://github.com/adamgutons" target="_blank"><i class="material-icons md-48">autorenew</i></a>
+                <!--<p>Other stuff</p>-->
+            </div>
+            <div id="col5">
+                <p>Resume</p>
+                <a href="../resume/resume_edit.pdf" target="_blank" title="A brief history..."><i class="material-icons md-48">autorenew</i></a>
+            </div>
+            <div id="col6">
+                <p>Bibliography</p>
+                <a href="../bib/bibliography.html" target="_blank"><i class="material-icons md-48">autorenew</i></a>
+            </div>
+        </div>
+            <div id="jsContent">
+                <hr>
+                <h1>The first javascript application from <i>Learning JS 3rd Edition</i>.</h1>
+		<p>Click and drag the mouse to draw a line:</p>
+		<canvas id="mainCanvas"></canvas>
+
+		<!--JQuery Library-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<!--Paper.js library-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+		<!--our own .js file-->
+		<script src="main.js"></script>
+            </div>
+        <div id="jsFooter">
+            <hr>
+            <p>Adam Gutonski &copy 2018</p>
+        </div>
+        </div>
+
+
+
+    </body>
+</html>
+
+
