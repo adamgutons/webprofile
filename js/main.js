@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     }; 
 
-    document.getElementById('clear').ontouch = function(){
+    document.getElementById('clear').ontouchstart = function(){
 
         paper.project.clear(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
         drawCircle(); //so far i just call this again to redraw the cirlce...
