@@ -40,14 +40,14 @@ $(document).ready(function() {
         paper.project.clear(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
          //so far i just call this again to redraw the cirlce...
         console.log('layers cleared');
-        document.getElementById("alerts").innerHTML = 'Sketch Cleared';
+        document.getElementById("alerts").innerHTML = 'Place cursor in box to clear the canvas...';
 
 
     }; 
 	
     document.getElementById('clear').ontouchstart = function(){
 
-        paper.activelayer.removeChildren(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
+        paper.activeLayer.removeChildren(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
         //drawCircle(); //so far i just call this again to redraw the cirlce...
         console.log('layers cleared');
         document.getElementById("alerts").innerHTML = 'Sketch Cleared (tap screen to start drawing again...)';
