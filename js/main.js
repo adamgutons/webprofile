@@ -25,7 +25,15 @@ $(document).ready(function() {
   		max = Math.floor(max);
   		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
+	function clearScreen(){
 
+        paper.project.clear(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
+        drawCircle(); //so far i just call this again to redraw the cirlce...
+        console.log('layers cleared');
+        document.getElementById("alerts").innerHTML = 'Sketch Cleared';
+
+
+    }; 
  	document.getElementById('clear').onclick = function(){
 
         paper.project.clear(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
@@ -38,7 +46,7 @@ $(document).ready(function() {
 
     document.getElementById('clear').ontouchstart = function(){
 
-        paper.project.clear(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
+        paper.activelayer.removeChildren(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
         drawCircle(); //so far i just call this again to redraw the cirlce...
         console.log('layers cleared');
         document.getElementById("alerts").innerHTML = 'Sketch Cleared';
