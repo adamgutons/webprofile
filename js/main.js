@@ -59,12 +59,19 @@ $(document).ready(function() {
 	paper.view.draw();
 });
 document.getElementById('clear').onclick = function(){
-		canvas = document.getElementById("mainCanvas");  //get ref to our canvas element
-		ctx = canvas.getContext("2d"); //get the 2d context of the element
-		ctx.clearRect(0, 0, canvas.width, canvas.height); //clears the canvas, but if we click we redraw...
+        canvas = document.getElementById("mainCanvas");  //get ref to our canvas element
+        ctx = canvas.getContext("2d"); //get the 2d context of the element
+        ctx.clearRect(0, 0, canvas.width, canvas.height); //clears the canvas, but if we click we redraw...
         paper.project.clear(); // paper has project property which is all layers in project, so everything on canvas i guess.  clears them 
         console.log('layers cleared');
         document.getElementById("alerts").innerHTML = 'Sketch Cleared';
 
 
-    }; 
+}; 
+
+/*use jQuery to navigate to new page...*/
+$(document).ready(function goToPage() {
+    $("#techPage").click(function () {
+        window.open("../index.html"); 
+    });
+});    

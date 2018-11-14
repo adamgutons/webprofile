@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../../css/index.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <title>Adam Gutonski</title>
     </head>
@@ -24,16 +24,28 @@ and open the template in the editor.
         <div id="content">
             <div id="col1">
                 <p>Home</p>
-                <a href="../index.html"><i class="material-icons md-48">home</i></a><!--<a href="none">JSON Project</a>-->
+                <a href="../../index.html"><i class="material-icons md-48">home</i></a><!--<a href="none">JSON Project</a>-->
             </div>
             <div id="col2">
                 <p>Java</p>
-                <a href="./java/java.html"><i class="material-icons md-48">autorenew</i></a>
+                <a href="../java/java.html"><i class="material-icons md-48">autorenew</i></a>
             </div>
             <div id="col3">
+                <p>JavaScript</p>
+                <a href="../../js/js_practice.html"><i class="material-icons md-48">autorenew</i></a>
+            </div>
+            <div id="col4">
                 <p>GitHub</p>
                 <a href="https://github.com/adamgutons" target="_blank"><i class="material-icons md-48">autorenew</i></a>
                 <!--<p>Other stuff</p>-->
+            </div>
+            <div id="col5">
+                <p>Bibliography</p>
+                <a href="../../bib/bibliography.html"><i class="material-icons md-48">autorenew</i></a>
+            </div>
+            <div id="col6">
+                <p>Resume</p>
+                <a href="../../resume/resume_edit.pdf" target="_blank" title="A brief history..."><i class="material-icons md-48">autorenew</i></a>
             </div>
         </div>
         <div id="pythProj1">
@@ -50,7 +62,7 @@ and open the template in the editor.
                 <i>game_counter</i> will track the number of games played by the user,
                 <i>start_game</i> will act as the control for ending the game, <i>dat_file</i> will
                 record the game records between the user and the program.</p>
-            <img src="../image/rps_code1.jpg">
+            <img src="../../image/rps_code1.jpg">
             <p>
                 At the top of the file I define the method <i>play_game</i>.  This method takes in
                 the <i>game_counter, start_game,</i> and <i>dat_file</i> arguments created in the main
@@ -60,7 +72,7 @@ and open the template in the editor.
                 closes the data file.  If the user types "rock", "paper", or "scissors", we enter the
                 else chain.
             </p>
-            <img src="../image/rps_code2.jpg">
+            <img src="../../image/rps_code2.jpg">
             <p>Here begins a chain of successive if/else statements.  First, three variables <i>a, b, c</i> store
                 strings with different read outs, "You Win!, Computer Wins!, or Tie game...".  These hard-coded
                 strings allowed me to write to file easier through the if/else chains. A string comparison drives
@@ -73,7 +85,7 @@ and open the template in the editor.
                 of rock, paper, scissors.  Finally, the script will return a message about invalid user entry if the user types
                 anythying other than rock, paper, or scissors into the console.  ISN'T COMPUTER GAMING GLORIOUS?!?
             </p>
-            <img src="../image/rps_code3.jpg">
+            <img src="../../image/rps_code3.jpg">
             <hr>
             <h3>Takeaways</h3>
             <p>I must submit to the will of the programming gods.  It is a life long learning journey, especially for someone
@@ -84,7 +96,7 @@ and open the template in the editor.
                 <i>/usr/local/bin</i>, which is the Linux directory for non-system, locally produced scripts.  We grant the file priveleges
                 with the shell command <i>chmod +x file.py</i>, and can move it to our <i>/bin/</i> directory via the <i>sudo mv file.py</i>
                 shell command.  Now the script can be called to run at anytime from any directory.</p>
-            <img src="../image/working_game.jpg">
+            <img src="../../image/working_game.jpg">
             <p>I would like to find a cleaner way to make the string comparisons between <i>comp_select</i> and <i>user_select.</i>
                 It does not seem "pythonic" to chain so many if/else statements, but it is the path set forth.  Eventually I would like to 
                 put this game into some type of GUI format.  I think it would be valuable to show some UI skills, but then again, I am building
@@ -100,7 +112,7 @@ and open the template in the editor.
                 that the script is fully methodized (modularized?) and looks pretty clean.  I am still
                 learning about the proper way to break a script into methods.  Let's first look
                 at <i>main()</i></p>
-            <img src="../image/json_code1.jpg">
+            <img src="../../image/json_code1.jpg">
             <p>First I call on the <i>load_JSON()</i> method which will open a JSON file, convert
                 the file data to a dictionary object, and return the object to a variable in <i>main()</i>
                 named <i>dictFromCgCap</i>.  The particular JSON file that we are using was obtained from
@@ -114,7 +126,7 @@ and open the template in the editor.
                 JSON file. Nested in the <i>'features'</i> key is an additional dictionary accessed by the key <i>'properties</i> 
                 which contains the data we want.  This is a neat way to dig into diciontaries that are nested within other 
                 dictionaries.</p>
-            <img src="../image/json_code3.jpg">
+            <img src="../../image/json_code3.jpg">
             <p>
                 There are a few utility methods that work to extract data from the converted JSON.  The AssembleList() methods
                 will take in the 'properties' dictionary from dictFromCgCap, as well as an empty list.  From the 'properties', each assemble 
@@ -124,7 +136,7 @@ and open the template in the editor.
                 and then pass this set to the built-in list() method to have a unique list.  The reason for compiling this list, is so that it can be assmbled into a 
                 new dictionary in the main method, called <i>bigSearchDict</i>.  Again, this dicitionary will be used to compare and search values in the 
                 JSON file.  Here is some output to make sense of things...</p>
-            <img src="../image/python_json_working1.jpg">
+            <img src="../../image/python_json_working1.jpg">
             <p>
                 The user is first prompted to search for the 'area', 'status', or 'asset_type'.  The AssembleAllLists() method will create the unique search values for each of the 
                 three criteria.  In the example, the user enters 'area' and is prompted with four different 'area' types to search by.  One of the draw backs to the program is the brittle
@@ -132,7 +144,7 @@ and open the template in the editor.
                 main methods in try/except to mitigate some constant frustration when the user enters an extra space or character.  Once the user enters both search criteria, the program will
                 print out "JSON file written..." when successful.
             </p>
-            <img src="../image/python_json_working2.jpg">
+            <img src="../../image/python_json_working2.jpg">
 
             <hr>
             <h3>Takeaways</h3>
@@ -141,12 +153,12 @@ and open the template in the editor.
                 We see what looks to be a Python dictionary, but it is a Javascript object.  The first object property is "Facility Improvement" whose property value is a another Javascript object.
                 The second object contains two properties, "budgeted_amount" and "id".  Their property values are lists containg the budget amounts and id numbers from our user search (collected from the CGCapitalProject JSON file).
             </p>
-            <img src="../image/json_code4.jpg">
-            <img src="../image/json_code5.jpg">
+            <img src="../../image/json_code4.jpg">
+            <img src="../../image/json_code5.jpg">
             <p>
-            I'm somehwat happy with this little script. It took some tinkering and I am not done yet.  I did not get a chance to feed the JSON file that the user collects,
-            back in to the program. An option for the assignment was to use a JSON file to search the larger data structure, and return some interesting stats such as average budgeted amount per status or area.
-            I like that the script is methodized.  I do not like the large 'options' string variable that gums up the enterSearchCrtieria() method.  Stay tuned for more...
+                I'm somehwat happy with this little script. It took some tinkering and I am not done yet.  I did not get a chance to feed the JSON file that the user collects,
+                back in to the program. An option for the assignment was to use a JSON file to search the larger data structure, and return some interesting stats such as average budgeted amount per status or area.
+                I like that the script is methodized.  I do not like the large 'options' string variable that gums up the enterSearchCrtieria() method.  Stay tuned for more...
             </p>
             <a href="#header" title="No really, why would I lie?"><i class="material-icons md-12">arrow_upward</i>Back to top</a>
         </div>

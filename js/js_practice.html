@@ -34,7 +34,7 @@ Please send any suggestions to adamgutonski@protonmail.com
                 </div>
                 <div id="col3">
                     <p>Python</p>
-                    <a href="../projects_page/python.html"><i class="material-icons md-48">autorenew</i></a>
+                    <a href="../projects_page/python/python.html"><i class="material-icons md-48">autorenew</i></a>
                 </div>
 
             </div>
@@ -53,14 +53,35 @@ Please send any suggestions to adamgutonski@protonmail.com
                     <a href="../bib/bibliography.html" target="_blank"><i class="material-icons md-48">autorenew</i></a>
                 </div>
             </div>
-            <div id="jsContent">
+            <div id="jsContent1">
                 <hr>
-                <h1>The first javascript application from <i>Learning JS 3rd Edition</i>.</h1>
-                <p>CAUTION:  This page is not yet fully optimized for mobile browsers...</p>
+                <h1>jQuery Practice</h1>
+                <p>I am not adept with JavaScript yet, and certainly not with any JS frameworks, but I am giving jQuery a shot because
+                it seems to be popular and it is straight forward.  There is a button at the end of this paragraph that will take you
+                to a page that I am developing for 
+                <a href="https://technologyrediscovery.net/" target="_blank">Technology Rediscovery LLC.</a></p>
+                <div>
+                    <input class="buttonDiv" type="button" id="techPage" value="Go To Page" onClick="goToPage">
+                </div>
+                <hr>
+            </div>
+            <div id="jsContent2">
+                <h1>JavaScript Canvas Application</h1>
+                <p id="appCaption">The first javascript application from <i>Learning JS 3rd Edition</i>.  In the opening chapters, Ethan Brown
+                takes us through building simple HTML and CSS pages and a corresponding JS script that utilizes the HTML5 canvas element.  The JS
+                code imports the <a href="http://paperjs.org/" target="_blank">paper.js</a> library and I then tweaked and tinkered with the code.  The book does
+                not show us how to draw lines, rather Brown explains the use of for loops to generate shapes on the canvas element.  He briefly describes
+                mouse events and from here I picked up the paper.js documentation to create a somewhat finished canvas app.  My JS script contains a short
+                random number generating function that is used to change the width of the canvas brush each time the button is clicked.  This function
+                also is used to return a value from 0 to 360 that is then set in hue property of path element from the paper.js library.  Paths are used
+                to create lines in the HTML5 canvas element.  This app is not perfect yet, but I was finally able to scale the canvas element with changing
+                browser size.  The bug occurs here when the user goes to draw on teh canvas again.  Their mouse will be off center from where the brush is actually
+                painting on screen.  Some day it shall be conquered...for now, enjoy the pretty colors.</p>
+                
                 <p>Click and drag the mouse to draw a line:</p>
-                <canvas id="mainCanvas"></canvas>
+                <canvas id="mainCanvas" class="mainCanvas"></canvas>
                 <div id="clearButton">
-                    <input type="button" id="clear" value="Clear">
+                    <input type="button" class="buttonDiv" id="clear" value="Clear">
                 </div>
                 <p id="alerts"></p>
                 <!--JQuery Library-->
@@ -75,6 +96,8 @@ Please send any suggestions to adamgutonski@protonmail.com
                 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
                 <!--Paper.js library-->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+                <!--JQuery-->
+                <script src="Descriptive%20statistics%20and%20the%20frequency%20distribution_files/jquery.js"></script>
                 <!--our own .js file-->
                 <script src="main.js"></script>
 
