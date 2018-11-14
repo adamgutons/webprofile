@@ -72,6 +72,6 @@ document.getElementById('clear').onclick = function(){
 /*use jQuery to navigate to new page...*/
 $(document).ready(function goToPage() {
     $("#techPage").click(function () {
-        window.open("../index.html"); 
+        window.open("techred_pages/moduleExample.html"); 
     });
 });    

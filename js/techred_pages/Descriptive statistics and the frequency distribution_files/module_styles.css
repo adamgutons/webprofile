@@ -1,0 +1,1472 @@
+
+/*for home section tablefs*/
+/*cellspacing="0" cellpadding="0" style="border: none;border-collapse: collapse;*/
+
+
+/* Color Scheme: Purple and orange 
+https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&secondary.color=F4511E
+*/
+
+/*Attempting to make site mobile responsive...
+    when minimum of 320 px (mobile) take off our float
+    doesn't look to bad!!'*/
+@media screen and (max-width: 320px) {
+    .asideTest {
+        float: none;
+    }
+    .asideTest > ul {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    .asideTest > ul > li {
+        display: inline;
+    }
+    #mainContent { /* .mainContainer class selector didn't work b/c ID has higher specificity in CSS '*/
+        padding-left: 0;
+        width: 90%;
+    }
+    #navTitle {
+        text-align: center;
+    }
+}
+
+/*for most mobiles and ipads, take off the floats for nav div
+    and pad maincontainer for better view alignment */ 
+@media screen and (min-width: 321px) and (max-width: 799px){
+    .asideTest {
+        float: none;
+    }
+    .asideTest > ul {
+        padding-left: 0;
+        padding-right: 10px;
+
+    }
+    .asideTest > ul > li {
+        display: inline;
+    }
+    #mainContent { /* .mainContainer class selector didn't work b/c ID has higher specificity in CSS '*/
+        padding-left: 0;
+        width: 100%;
+    }
+    #navTitle {
+        text-align: center;
+    }
+    
+}
+
+/*style our nav tabs and list when screen is minimumf 800px*/
+@media screen and (min-width: 800px) {
+    .asideTest {
+        width: 15%;
+        padding-top: 0;
+        margin-top: 10%;
+        float: left;
+        padding-left: 20px;
+        text-align: center;
+        border: 1px solid;
+        border-color: #5d34af;
+        border-left-width: 10px;
+        border-bottom: none; 
+        border-right: none;
+        border-top: none;
+        position: fixed;
+    }
+    .asideTest > ul {
+       text-decoration: none;
+       padding: 0;
+
+    }
+    .asideTest > ul > li {
+       display: block;
+       text-decoration: none;
+    }
+    
+}
+
+
+/* ******************* SITE-WIDE DEFAULT STYLING  ******************/
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+
+}
+
+body{
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+    color: #455a64;
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+.mainContainer {
+    width: 60%;
+    padding-left: 90px;
+    margin: 0 auto;
+    display: block;
+    /*float: left; remove float and add position: fixed; above in screen size to keep panel docked on desktop*/
+    /*padding: 15px;*/
+}
+
+p {
+    /*color: #373737;*/
+    color: black;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.noTopMargin{
+    margin-top: 0px;
+}
+
+button.text-small{
+    font-size: small;
+}
+
+
+
+
+/* *********  active elements *******************/
+
+.page-revision-history{
+    display: block;
+    float: right;
+    width: 200px;
+    border: none;
+
+}
+
+.floating-right{
+    display: block;
+    float:right;
+    clear:left;
+}
+
+
+
+
+/* *********  DIVs *******************/
+
+div.div{
+    display: block;
+    width: 70%;
+    height: 30px;
+    padding:15px;
+    border:10px;
+}
+
+
+.page-edge{
+    margin: 0px;
+    border: 0px;
+}
+
+.page-history{
+    font-size: small;
+    padding: 5px;
+    clear:both;
+    text-align: right;
+}
+
+
+/* Solid left bar box - Blue*/
+div.tip{
+    padding: 10px;
+    background-color: #bbdefb;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 10px solid #003c8f;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+div.overview{
+    padding: 10px;
+    /*background-color: #cfd8dc;*/
+    background-color: #d1c4e9;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 10px solid #4527a0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+div.specification{
+    padding: 10px;
+    background-color: #b2dfdb;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 10px solid #003d33;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+div.warning{
+    padding: 10px;
+    background-color: #ffccbc;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 10px solid #9f0000;
+}
+
+
+
+div.code{
+    padding: 10px;
+    background-color: #90a4ae;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+div.toggleable{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000063;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+div.noBorder{
+    border-style: none;
+    border-width: 0px;
+    width: 100%;
+
+}
+
+div.logoLink{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-size: 1.2em;
+    /*font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;*/
+
+
+}
+
+.session-guide-box{
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.notecard{
+    background-image: url('https://technologyrediscovery.net/img/notecardSmall.JPG');
+    background-size: 100% auto;
+    background-clip: border-box;
+    display: block;
+    clear: both;
+    width: 90%;
+    height: auto;
+    border: none;
+    margin:none;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+}
+
+.notecard-text{
+    color: #37f414;
+    font-weight: bold;
+    font-size: 2.1em;
+    font-family: monospace;
+
+}
+
+.notecard p{
+    color: #37f414;
+    font-weight: bold;
+    font-size: 2.1em;
+    font-family: monospace;
+}
+
+.notecard-title-left{
+    display: inline-block;
+    height: 60px;
+    margin-bottom: 15px;
+    font-size: 3em;
+    font-weight: bold;
+    padding-top: 15px;
+
+
+
+}
+
+
+/* *********  Site-wide links *******************/
+
+a:link{
+    color: #1565c0;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+
+a:visited{
+    color: #1565c0;
+    /*font-weight: normal;*/
+    text-decoration: none;
+}
+
+a:hover{
+    color: #003c8f;
+    /*font-weight: normal;*/
+    text-decoration: underline;
+
+
+}
+
+
+
+
+/*LISTS */
+
+li {
+
+    padding: 6px;
+}
+
+ol.tableleft{
+    /*color: blue;*/
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+
+}
+
+ol {
+    color: black;
+    font-size: 1.2em;
+    margin-top: 0px;
+    padding-left: 15px;
+}
+
+
+ul {
+    color: black;
+    font-size: 1.2em;
+}
+
+
+
+/* HEADERS */
+
+h1 {
+    color: #000070;
+    font-size: 1.9em;
+}
+
+h2 { 
+    color: #4527a0;
+    font-size: 1.4em;
+
+}
+
+h2.subTitle {
+    font-style: italic;
+    color: #616161;
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+
+h3{
+    display: block;
+    color: #5d34af;
+    /*font-style: italic;*/
+    font-size: 1.2em;
+    /*margin-top: 5px;*/
+    margin-bottom: 15px;
+
+}
+
+.session-guide-box h3{
+    color: #1c313a;	
+    font-size: 1.1em;
+    font-style: normal;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    display: block;
+}
+
+h4 {
+    color: #616161;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+h5 {
+    font-size: 1.0em;
+}
+
+
+
+.module h3{
+    color: 'green'#000a12;
+    margin-top: 0px;
+}
+
+.module h1, h2, h3{
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.module h4{
+    font-family: inherit;
+}
+
+.module p{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* ****************  UTILITY PAGRAPHS   *******************/
+
+
+/* Misc paragraph styling */
+
+p.code {
+    display: block;
+    font-family: monospace;
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+/* ****************  ICONS  *******************/
+
+i.material-icons{
+    font-size: 22px;
+    color: #280680;
+    margin-right: 5px;
+
+
+}
+
+p i.material-icons{
+    font-size: 15px;
+}
+
+
+
+
+div.large i.material-icons{
+    font-size: 100px;
+    color: #280680;
+    display: inline-block;
+}
+
+/*
+div.lo i.material-icons{
+        color: #280680;
+        font-size: 20px;
+        display: inline-block;
+
+}
+*/
+
+th.iconCell i.material-icons{
+    margin-top: 5px;
+}
+
+td.iconCell i.material-icons{
+    margin-top: 5px;
+}
+
+
+
+
+/*************** SPANS *********************/
+
+span.mono{
+    font-family: monospace;
+    font-size: 1.1em;
+    font-weight: normal;
+
+}
+
+
+
+span.ind{
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    text-indent: 4em;
+}
+
+span.bold{
+    font-weight: bold;
+}
+
+span.under{
+    text-decoration: underline;
+}
+
+
+span.em1{
+    color: green;
+}
+
+span.em2{
+    color: maroon;
+}
+
+span.strikethrough{
+    text-decoration: line-through;
+
+}
+
+
+span.italic{
+    font-style: italic;
+}
+
+
+
+
+/* ******************* IMAGES AND FIGURES AND CAPTIONS  ******************/
+
+img{
+    display: block;    
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.captioned{
+    margin-bottom: 0px;
+}
+
+img.legacy-header{
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+
+}
+
+/* Image Caption styling*/
+div.caption{
+    /*font-weight: bold;*/
+    font-style: italic;
+    /*text-align:center;*/
+    display: block;    
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+
+div.halfCaptionCont{
+    width: 395px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
+
+
+}
+
+div.halfCaptionText{
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    text-align:center;
+    width: 100%;
+    vertical-align: top;
+}
+
+img.imageWCaption{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+
+
+}
+
+div.figureTitle{
+    font-weight: bold;
+    /*font-style: italic;*/
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+
+
+img.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+/* EXTERNAL LINKS */
+
+img.ext{
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+img.contentLogo{
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+p.contentLink{
+    display: inline-block;
+    float: left;
+}
+
+img.module{
+    margin-bottom: 20px;
+
+}
+
+iframe.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+div.iframe{
+    margin-bottom: 15px;
+    display: block;
+}
+
+
+
+
+/* ****************  TABLES MSIC *******************/
+
+
+
+
+/*Standard table for feature boxes*/
+.quarterCols{
+    /*removed table-layout: fixed*/
+    width: 100%;
+    /*white-space: nowrap;*/
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+
+
+}
+
+.quarterCols td{
+    /*white-space: pre-wrap;*/
+    border-style: none;
+    padding: 8px;
+
+}
+
+.quarterCols th{
+    /*white-space: pre-wrap;*/
+    border-style: none;
+
+}
+
+.quarterCols-col-content{
+    width: 30%;
+    white-space: normal;
+    vertical-align: top;
+    float: left;
+
+}
+
+.quarterCols-col-topic{
+    width:  40%;
+    vertical-align: top;
+    /*white-space: pre-wrap;*/
+}
+
+.quarterCols{
+    padding: 0px;
+}
+
+.quarterCols tr
+{	background-color: none;
+
+}
+
+.table_spacer {
+    background-color: #4527a0;
+}
+
+.sessionCalTable{
+    border-collapse: collapse;
+}
+
+.sessionCalTable td, th{
+    padding: 5px;
+}
+
+.grayedOut{
+    background-color: #A4A4A4;
+    color: white;
+
+}
+
+
+
+
+
+/* ******************* Lesson Guides pages STYLING ******************/
+
+div.iconHeaderLine{
+
+    display: block;
+    width: 100%;
+    height: 30px;
+    overflow-y: hidden;
+
+}
+
+
+div.iconContForHeaders{
+    display: inline-block;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 22px;
+}
+
+div.headerCont{
+    display: inline-block;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+div.headerCont h2{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    top: -3px;
+    clear: none;
+
+
+}
+
+
+/* ******************* PUBLICATION STYLING ******************/
+
+
+.rubric {
+    width: 100%;
+    overflow-x:auto;
+    margin: auto;
+    table-layout: fixed;
+}
+
+table.pub, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.prof {
+    width: 25%;
+}
+
+.criteria {
+    width: 75%;
+}
+
+/*Knowledge and skill breakdown tables*/
+
+.unit{
+    width: 20%;
+
+}
+.obj {
+    width: 40%;
+}
+
+.manifest {
+    width: 40%
+}
+
+
+
+
+
+div.homelinkLinePub{
+    display: block;
+    /*border: 2px solid purple;*/
+    position: relative;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+
+div.iconContPub {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding-left: 2px;
+    margin-right: 5px;
+
+    /*border: 2px solid black;*/
+}
+
+div.homeLinkContPub{
+    display: inline-block;
+    /*border: 2px solid green;*/
+    position: absolute;
+    /*height: 28px;*/
+    overflow: hidden;
+}
+
+a.homeLinkPub{
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    /*border: 2px solid orange;*/
+}
+
+
+i.material-icons{
+    font-size: 22px;
+    color: #4a148c;
+    display: inline-block;
+
+
+
+}
+
+
+
+
+
+
+/* ******************* END PUBLICATION STYLING ******************/
+
+
+
+/* ******************* BUTTONS  ******************/
+
+
+.button{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.navButton{
+    font-size: 1.0em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttonFlat{
+
+    background-color: #512ca8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+
+}
+
+.no-background{
+    background-color: white;
+    box-shadow: none;
+
+}
+
+
+
+
+
+
+
+/* ******************* END BUTTONS ******************/
+
+
+
+
+/* ******************* END SITE-WIDE ******************/
+/* ******************* END SITE-WIDE ******************/
+/* ******************* END SITE-WIDE ******************/
+
+
+
+
+
+
+/* ******************* HOME PAGE SECTIONS ******************/
+
+
+div.homeSection{
+    /*border-bottom: 1px solid black;*/
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.item{
+    font-size: small;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+div.itemInd{
+    font-size: small;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    margin-left: 31px;
+}
+
+
+
+
+
+/*  HOME LINKS */
+
+
+
+div.homelinkLine{
+    display: block;
+    /*border: 2px solid purple;*/
+    /*width: 400px; if we cut this, the line after data 102 home index will collapse w/ screen size...otherwise it is off screen!*/
+    position: relative;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+
+div.iconCont{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    padding-left: 2px;
+    margin-right: 5px;
+
+    /*border: 2px solid black;*/
+}
+
+div.homeLinkCont{
+    display: inline-block;
+    /*border: 2px solid green;*/
+    position: absolute;
+    height: 28px;
+    overflow: hidden;
+    font-size: normal;
+}
+
+a.homeLink{
+    display: inline-block;
+    margin-top: 2px;
+    /*border: 2px solid orange;*/
+}
+
+
+i.material-icons{
+    font-size: 22px;
+    color: #4a148c;
+    display: inline-block;
+
+
+
+}
+
+
+
+.homeSection p{
+    margin-top: 10px;	
+    margin-bottom: 10px;
+    color: black;
+    display: inline-block;
+    /*height: 20px;*/
+    float: left;
+    width: 100%;
+
+
+}
+
+
+/* Course boxes styling*/
+p.overview{
+    font-style: italic;
+}
+
+div.subheader{
+    font-size: .8em;
+    font-style: italic;
+    margin-bottom: 10px;
+    display: block;
+    width: 400px;
+}
+
+
+
+table.homeSectionTable{
+    border: none;
+    width: 100%;
+
+}
+
+
+
+tr.homeSectionTR{
+    border: none;
+
+}
+
+td.homeSectionTDLeft {
+    border: none;
+
+}
+
+td.homeSectionTDRight {
+    border: none;
+    padding-left: 15px;
+
+}
+
+.home h1{
+    color: #002171;
+    font-size: 1.5em;
+}
+
+
+.homeSection h2{
+    color: #4a148c;	
+    margin-top: 5px;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+
+.homeSection h3{
+    color: #1c313a;	
+    font-size: 1.1em;
+    font-style: normal;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    display: block;
+}
+
+h3.topOfCol{
+    margin-top: 0px;
+}
+
+
+.homeSection h4{
+    color: #1c313a;
+    font-size: 1em;
+    font-style: normal;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    display: block;
+}
+
+
+
+.homeSection h5{
+    color: #1c313a;
+    font-size: .9em;
+    font-style: normal;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+/*
+.homeSection h5{
+        color: #1c313a;
+        font-size: .9em;
+        font-style: normal;
+        letter-spacing: -2px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        display: inline-block;
+        
+}*/
+
+
+/*.iconBox i.material-icons{
+        font-size: 20px;
+        color: #1c313a;
+        margin-right: 10px;
+        float: left;
+}*/
+
+div.iconline{
+    display: block;
+    margin-bottom: 5px;
+    /*clear: right;*/
+    margin-right: 8px;
+    /*height: 20px;*/
+
+}
+
+div.spacedLines{
+    line-height: 1.5em;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+    width: 380px;
+    margin-bottom: 8px;
+}
+
+div.monoSpacedLines{
+    line-height: 1.5em;
+    font-size: .9em;
+    font-weight: normal;
+    font-family: monospace;
+    display: block;
+    width: 400px;
+}
+/*
+
+
+                                                                        <div class="iconline">
+                                                                                <div class="iconBox">
+                                                                                        <i class="material-icons">school</i>
+                                                                                </div>
+
+                                                                                <div class="linkBox">
+                                                                                        <a href="">North: Tue/Th 9:30-11:30am | Rm 1140</a>
+                                                                                </div>
+                                                                        </div>
+
+
+*/
+
+img.indexThumb{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+
+/* ***************** module navigation divs ******************/
+div.moduleNavigation{
+    display: block;
+
+
+}
+
+div.modNavItem{
+    display: inline-block;
+    position: relative;
+    height: 150px;
+
+}
+
+div.modNavIconLarge{
+    display: inline-block;
+    position: relative;
+
+
+}
+
+
+div.modNavIconLarge i.material-icons{
+    display: inline-block;
+    position: relative;
+    font-size: 150px;
+
+
+}
+
+div.modNavText{
+    display: inline-block;
+    position: relative;
+
+
+}
+
+div.modNavText h1{
+    display: block;
+
+
+}
+
+div.modNavText p{
+
+    display: block;
+
+
+}
+
+div.modNavLineBreak {
+    display: block;
+    height: 0px;
+}
+
+
+
+
+
+div.caption p{
+    display: block;
+    font-style: italic;
+    font-size: 12pt;
+}
+
+div.figure p{
+    display: block;
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 5px;
+
+}
+
+
+
+/* lo = learning outcomes*/
+
+div.lo h5{
+    display: inline-block;
+}
+
+.lo p{
+    margin: 0px 5px 5px 5px;
+}
+
+
+/* ***************** module misc  ******************/
+
+span.underline{
+    text-decoration: underline;
+}
+
+div.project div.caption{
+
+
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+
+/* Learning objectives table in modules*/
+
+table.lo{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    border: none;
+
+}
+
+table.lo th{
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+    padding: 5px;
+
+}
+
+th.icon{
+    width: 25px;
+}
+
+table.lo td{
+    border: none;
+}
+
+table.lo th{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ****************  COURSE DOCUMENTS  *******************/
+
+/*Schedule Table Styling*/
+
+
+table#scedTab{
+    table-layout: fixed;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow-x:auto; 
+}
+
+
+/* Table styling for syllabus table for CIT100 F17*/
+
+.courseInfo{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.catCol {
+    width: 25%;
+}
+
+.contCol {
+    width: 75%;
+}
+
+
+
+
+/* ******************* PAGE-SPECIFIC  ******************/
+
+/* CIT100 Syllabus styling */
+/* Used to style table coming from spreadsheet export*/
+
+.ta1 p{
+    margin: 0px;
+}
+
+td.shadeG{
+    background-color: lightgray;
+}
+
+td.shadeB{
+    background-color: lightblue;
+}
+
+.shadeN{
+    background-color: lightgreen;
+}
+
+.headRow {
+    font-weight: bold;
+}
+
+td.ce4{
+    background-color: lightblue;
+}
+
+/*Styling for java course schedule table F17*/
+
+.fixedTab {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.num {
+    width: 5%;
+}
+
+.date {
+    width: 15%;
+}
+
+.topic {
+    width: 40%;
+}
+
+.links {
+    width: 40%;
+}
+
+
+/*Added CSS for module nav changes in the min/max media at top
+    Have manipulated a few divs (the tables for example) width to get  
+        mobile responsiveness...tried to remember to note where
+    Adding styling for moduleContents to try and get more mobile responsive...
+*/
+.navButton {
+    background: none;
+    font-size: small;
+    width: 100%;
+}
+
+.navTitle {
+    display: block;
+    color: #5d34af;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.navButton:hover {
+    color: #5d34af; /* light purple */
+}
