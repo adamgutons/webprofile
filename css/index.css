@@ -21,7 +21,7 @@ Author     : Adam Gutonski
     0% {top: 0px;}
     100% {top: 200px;}
 }
-@media all and (max-width: 320px) {
+@media handheld and (max-width: 320px) {
     .material-icons.md-48 {
         font-size: 24px;
     }
@@ -32,7 +32,7 @@ Author     : Adam Gutonski
     }
 }
 
-@media all and (min-width: 321px) and (max-width: 799px){
+@media handheld and (min-width: 321px) and (max-width: 799px){
     .material-icons.md-48 {
         font-size: 50px;
     }
