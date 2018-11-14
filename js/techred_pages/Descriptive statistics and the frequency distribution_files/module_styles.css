@@ -11,8 +11,7 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
     when minimum of 320 px (mobile) take off our float
     doesn't look to bad!!'*/
 @media screen and (max-width: 320px) {
-    .asideTest {
-        float: none;
+    #asideCollapse{
         position: static;
     }
     .asideTest > ul {
