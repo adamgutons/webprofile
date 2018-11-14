@@ -10,7 +10,7 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
 /*Attempting to make site mobile responsive...
     when minimum of 320 px (mobile) take off our float
     doesn't look to bad!!'*/
-@media screen and (max-width: 320px) {
+@media all and (max-width: 320px) {
     #asideCollapse{
         display: none; /*turns off nav bar on mobile browsers*/
     }
@@ -38,7 +38,7 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
 
 /*for most mobiles and ipads, take off the floats for nav div
     and pad maincontainer for better view alignment */ 
-@media screen and (min-width: 321px) and (max-width: 799px){
+@media all and (min-width: 321px) and (max-width: 799px){
     #asideCollapse {
         display: none; /*turns off nav bar on mobile browsers*/
     }
