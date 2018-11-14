@@ -13,6 +13,7 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
 @media screen and (max-width: 320px) {
     .asideTest {
         float: none;
+        position: static;
     }
     .asideTest > ul {
         padding-left: 0;
@@ -35,6 +36,7 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
 @media screen and (min-width: 321px) and (max-width: 799px){
     .asideTest {
         float: none;
+        position: static;
     }
     .asideTest > ul {
         padding-left: 0;
@@ -74,7 +76,6 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
     .asideTest > ul {
        text-decoration: none;
        padding: 0;
-
     }
     .asideTest > ul > li {
        display: block;
