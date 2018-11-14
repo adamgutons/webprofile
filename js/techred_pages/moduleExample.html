@@ -161,7 +161,7 @@
                 <li><a href="https://ocrdata.ed.gov/">Civil rights data collection (CRDC)</a></li>
             </ul>
             <hr>
-            <!--not needed right now...<p><a href="#top"><i class="material-icons">arrow_upward</i> back up to contents</a></p>-->
+            <!--not needed right now...--><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p><!-->
             </div>
             
             <div id="workspace">
@@ -187,7 +187,7 @@
 
             </ol>
 
-            <!--not needed right now w/ contents panel...<p><a href="#top"><i class="material-icons">arrow_upward</i> back up to contents</a></p>-->
+            <!--not needed right now w/ contents panel--><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p> <!-->
             <hr>
             </div><!--close workspace div-->
 
@@ -215,7 +215,7 @@
                 <li>Develop a defensible claim based on your primary data to share with the class.</li>
             </ol>
 
-            <!--do not need this w/ content panel <p><a href="#top"><i class="material-icons">arrow_upward</i> back up to contents</a></p> -->
+            <!--do not need this w/ content panel --><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p> <!-->
             <hr>
 
             </div><!--close exercises div-->
@@ -291,6 +291,7 @@
                     and the summary document and get a sense of your project.</li>
                 <li></li>
             </ol>
+            <p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p>
             <hr>
             </div><!--close miniProject div-->
             
@@ -306,6 +307,14 @@
                      *ugly list of functions....
                      */
                     
+                    /*working to grab all elements w/ back to contents so they can hide when not on mobile browser*/
+                    var topLinks = document.querySelectorAll('.backToTop');
+                    console.log(topLinks.length); 
+                    for(var l=0; l <= topLinks.length - 1; l++){
+                        console.log(topLinks[l].classList.value);
+                        $("."+topLinks[l].classList.value).hide();
+                    };
+                    
                     function hideDivs() {
                         'use strict';
                         var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
@@ -314,6 +323,19 @@
                         };
                     };
                     hideDivs();
+                    
+                    w = window.innerWidth;
+                    if(w === 320 || w === 375){
+                        var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
+                        for(var i=0; i <= arr.length-1; i++){
+                            $(arr[i]).show();
+                        };
+                        console.log(topLinks);
+                        for(var l=0; l <= topLinks.length - 1; l++){
+                        console.log(topLinks[l].classList.value);
+                        $("."+topLinks[l].classList.value).show();
+                    };
+                    }
                     
                     /*
                     $("#externalResources").hide();

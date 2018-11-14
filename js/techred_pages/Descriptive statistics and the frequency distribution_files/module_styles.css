@@ -12,9 +12,14 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
     doesn't look to bad!!'*/
 @media screen and (max-width: 320px) {
     #asideCollapse{
-        float: none;
-        position: static;
+        display: none; /*turns off nav bar on mobile browsers*/
     }
+    #moduleContents {
+        display: inline;
+    }
+    #externalResources {
+        display: inline;
+    } 
     .asideTest > ul {
         padding-left: 0;
         padding-right: 10px;
@@ -34,10 +39,10 @@ https://material.io/color/#!/?view.left=0&view.right=0&primary.color=5d34af&seco
 /*for most mobiles and ipads, take off the floats for nav div
     and pad maincontainer for better view alignment */ 
 @media screen and (min-width: 321px) and (max-width: 799px){
-    #asideCollapse{
-        float: none;
-        position: static;
+    #asideCollapse {
+        display: none; /*turns off nav bar on mobile browsers*/
     }
+    
     .asideTest > ul {
         padding-left: 0;
         padding-right: 10px;
