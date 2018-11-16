@@ -328,15 +328,15 @@
                         };
                     };
                     
-                    
-                    
-                    
                     function hideDivs() {
                         'use strict';
-                        var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
-                        for(var i=0; i <= arr.length-1; i++){
-                            $(arr[i]).hide();
+                        var moduleFramework = document.querySelectorAll(".moduleFramework");
+                        for(var i=0; i <= moduleFramework.length-1; i++){
+                            if(moduleFramework[i]["id"] !== "moduleContents"){
+                                $('#'+moduleFramework[i]["id"]).hide();
+                            }
                         };
+
                     };
                     
                     function showDivs() {
@@ -349,14 +349,20 @@
                     
                     function printPropName(e){
                         console.log(e.currentTarget);
+                        //moduleFramework = document.querySelectorAll(".moduleFramework");
+                        //console.log(moduleFramework);
                         
                     }
+                    
+                    /**WORKING TO GATHER DIVS EASILY, TESTING FOR NAV BUTTONS AND MODULE FRAMEWORK CLASS**/
                     navButtons = document.querySelectorAll(".navButton");  //grab all of the panel nav buttons
-                    console.log(navButtons);
+                    //console.log(navButtons);
                     navButtons.forEach(button => button.addEventListener('click', printPropName)); //for each button, add click event listener to trigger printPropName
+                    
                     
                     hideContentLinks();
                     hideDivs();
+                    
                     lwidth = window.screen.width;  //able to capture mobile screen w/ window.screen.width prop
                     //w = window.innerWidth;
                     if(lwidth === 320 || lwidth === 375){
@@ -380,12 +386,6 @@
                     showDivs();
                     }
                     
-                    /*
-                    $("#externalResources").hide();
-                    $("#workspace").hide();
-                    $("#exercises").hide();
-                    $("#miniProject").hide();
-                    */
                    
                     /*this is for erics revision history button at top left of page*/
                     $("#page-history-button").click(function () {
