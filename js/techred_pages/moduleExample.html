@@ -23,6 +23,7 @@
                 <li><button class="navButton" id="showWorkspace">Work Space</button></li>
                 <li><button class="navButton" id="showExercises">Exercises</button></li>
                 <li><button class="navButton" id="showMiniProject">Mini Project</button></li>
+                <li><button class="navButton" id="testButton">TEST BUTTON</button></li>
                 <li><button class="navButton" id="goHome">Home</button></li>
             </ul>
         </div>
@@ -71,7 +72,7 @@
             <h1 id="top">Descriptive statistics and the frequency distribution</h1>
             <!--<button class="button no-background text-small floating-left" id="topButton">ButtonTest</button>-->
             
-            <div id="moduleContents">
+            <div id="moduleContents" class="moduleFramework">
             <h2>Contents</h2>
             
             <p>
@@ -123,7 +124,8 @@
 
             <hr>
             </div><!--close moduleContents div-->
-            <div id="externalResources">
+            
+            <div id="externalResources" class="moduleFramework"> 
             <h2 id="resources"><i class="material-icons">book</i>External Resources</h2>
 
             <h3>Featured resource: Statistics with Dana Lee Ling in Micronesia </h3>
@@ -160,10 +162,10 @@
                 <li><a href="https://ocrdata.ed.gov/">Civil rights data collection (CRDC)</a></li>
             </ul>
             <hr>
-            <!--not needed right now...--><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p><!-->
+            <!--not needed right now...--><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p>
             </div>
             
-            <div id="workspace">
+            <div id="workspace" class="moduleFramework">
             <!-- 	
                     <h2 id="hamburger"><i class="material-icons">restaurant</i>Module Hamburger Guide</h2>
                             <h3>Optional and intended for in-person sections</h3>
@@ -186,11 +188,11 @@
 
             </ol>
 
-            <!--not needed right now w/ contents panel--><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p> <!-->
+            <!--not needed right now w/ contents panel--><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p> 
             <hr>
             </div><!--close workspace div-->
 
-            <div id="exercises">
+            <div id="exercises" class="moduleFramework">
             <h2 id="ex1"><i class="material-icons">motorcycle</i>Exercise 1: Gathering primary data </h2>
 
             <h3>Exercise type: Interactive data gathering activity</h3>
@@ -214,14 +216,14 @@
                 <li>Develop a defensible claim based on your primary data to share with the class.</li>
             </ol>
 
-            <!--do not need this w/ content panel --><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p> <!-->
+            <!--do not need this w/ content panel --><p><a href="#top" class="backToTop"><i class="material-icons">arrow_upward</i> back up to contents</a></p> 
             <hr>
 
             </div><!--close exercises div-->
 
 
 
-            <div id="miniProject">
+            <div id="miniProject" class="moduleFramework">
             <h2 id="proj"><i class="material-icons">build</i>Module Mini-Project: Comparing parcel values</h2>
             <h3>Exercise type: Culminating Activity</h3>
 
@@ -306,6 +308,7 @@
                      *ugly list of functions....
                      */
                     
+                    
                     /*working to grab all elements w/ back to contents so they can hide when not on mobile browser*/
                     function hideContentLinks() {
                         var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
@@ -325,6 +328,8 @@
                         };
                     };
                     
+                    
+                    
                     function hideDivs() {
                         'use strict';
                         var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
@@ -341,12 +346,32 @@
                         };
                     };
                     
+                    function mobileResponse(screenWidth) {
+                        if(screenWidth === 320 || screenWidth === 375){
+                        $("#asideCollapse").hide();
+                        /*$("#mainContent").hide();*/
+                        alert("do you really want to live in mobile hell?");
+                        showContentLinks();
+                        showDivs();
+                        };
+                    };
+                    
+                    function printPropName(e){
+                        console.log(e.currentTarget);
+                        
+                    }
+                    navButtons = document.querySelectorAll(".navButton");  //grab all of the panel nav buttons
+                    console.log(navButtons);
+                    navButtons.forEach(button => button.addEventListener('click', printPropName)); //for each button, add click event listener to trigger printPropName
+                    
                     hideContentLinks();
                     hideDivs();
-                    lwidth = window.screen.width;
+                    lwidth = window.screen.width;  //able to capture mobile screen w/ window.screen.width prop
+                    mobileResponse(lwidth);
                     //w = window.innerWidth;
+                    /*
                     if(lwidth === 320 || lwidth === 375){
-                    /*    
+                        
                         var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
                         for(var i=0; i <= arr.length-1; i++){
                             $(arr[i]).show();
