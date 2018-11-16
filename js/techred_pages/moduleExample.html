@@ -307,11 +307,22 @@
                      */
                     
                     /*working to grab all elements w/ back to contents so they can hide when not on mobile browser*/
-                    var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
-                    console.log(topLinks.length); 
-                    for(var l=0; l <= topLinks.length - 1; l++){
-                        console.log(topLinks[l].classList.value);  // prints each class name to make sure it has them all
-                        $("."+topLinks[l].classList.value).hide(); // hides them all 
+                    function hideContentLinks() {
+                        var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
+                        console.log(topLinks.length); 
+                        for(var l=0; l <= topLinks.length - 1; l++){
+                            console.log(topLinks[l].classList.value);  // prints each class name to make sure it has them all
+                            $("."+topLinks[l].classList.value).hide(); // hides them all 
+                        };
+                    };
+                    
+                    function showContentLinks() {
+                        var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
+                        console.log(topLinks.length); 
+                        for(var l=0; l <= topLinks.length - 1; l++){
+                            console.log(topLinks[l].classList.value);  // prints each class name to make sure it has them all
+                            $("."+topLinks[l].classList.value).show(); // hides them all 
+                        };
                     };
                     
                     function hideDivs() {
@@ -321,6 +332,16 @@
                             $(arr[i]).hide();
                         };
                     };
+                    
+                    function showDivs() {
+                        'use strict';
+                        var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
+                        for(var i=0; i <= arr.length-1; i++){
+                            $(arr[i]).show();
+                        };
+                    };
+                    
+                    hideContentLinks();
                     hideDivs();
                     lwidth = window.screen.width;
                     //w = window.innerWidth;
@@ -337,10 +358,12 @@
                         $("#asideCollapse").hide();
                     };
                     */
-                    console.log(lwidth);
+                    //console.log(lwidth);
                     $("#asideCollapse").hide();
                     /*$("#mainContent").hide();*/
                     alert("do you really want to live in mobile hell?");
+                    showContentLinks();
+                    showDivs();
                     }
                     
                     /*
