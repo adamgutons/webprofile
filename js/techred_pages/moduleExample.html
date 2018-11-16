@@ -322,9 +322,11 @@
                         };
                     };
                     hideDivs();
-                    
+                    lwidth = window.screen.width;
+                    console.log(lwidth);
                     w = window.innerWidth;
-                    if(w === 320 || w === 375){
+                    if(lwidth === 320 || lwidth === 375){
+                    /*    
                         var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
                         for(var i=0; i <= arr.length-1; i++){
                             $(arr[i]).show();
@@ -335,6 +337,10 @@
                         $("."+topLinks[l].classList.value).show();
                         $("#asideCollapse").hide();
                     };
+                    */
+                    console.log(lwidth);
+                    $("#asideCollapse").hide();
+                    $("#mainContent").hide();
                     }
                     
                     /*
