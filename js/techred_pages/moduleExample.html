@@ -330,6 +330,7 @@
                     
                     
                     
+                    
                     function hideDivs() {
                         'use strict';
                         var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
@@ -346,16 +347,6 @@
                         };
                     };
                     
-                    function mobileResponse(screenWidth) {
-                        if(screenWidth === 320 || screenWidth === 375){
-                        $("#asideCollapse").hide();
-                        /*$("#mainContent").hide();*/
-                        alert("do you really want to live in mobile hell?");
-                        showContentLinks();
-                        showDivs();
-                        };
-                    };
-                    
                     function printPropName(e){
                         console.log(e.currentTarget);
                         
@@ -367,11 +358,9 @@
                     hideContentLinks();
                     hideDivs();
                     lwidth = window.screen.width;  //able to capture mobile screen w/ window.screen.width prop
-                    mobileResponse(lwidth);
                     //w = window.innerWidth;
-                    /*
                     if(lwidth === 320 || lwidth === 375){
-                        
+                    /*    
                         var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
                         for(var i=0; i <= arr.length-1; i++){
                             $(arr[i]).show();
