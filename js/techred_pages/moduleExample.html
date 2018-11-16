@@ -23,7 +23,6 @@
                 <li><button class="navButton" id="showWorkspace">Work Space</button></li>
                 <li><button class="navButton" id="showExercises">Exercises</button></li>
                 <li><button class="navButton" id="showMiniProject">Mini Project</button></li>
-                <li><button class="navButton" id="testButton">TEST BUTTON</button></li>
                 <li><button class="navButton" id="goHome">Home</button></li>
             </ul>
         </div>
@@ -304,35 +303,26 @@
 
 
                     <script type="text/javascript">
-                    /*loop through array of our id values to hide at once rather than an
-                     *ugly list of functions....
-                     */
-                    
                     
                     /*working to grab all elements w/ back to contents so they can hide when not on mobile browser*/
                     function hideContentLinks() {
                         var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
-                        console.log(topLinks.length); 
                         for(var l=0; l <= topLinks.length - 1; l++){
-                            console.log(topLinks[l].classList.value);  // prints each class name to make sure it has them all
                             $("."+topLinks[l].classList.value).hide(); // hides them all 
                         };
                     };
                     
                     function showContentLinks() {
                         var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
-                        console.log(topLinks.length); 
                         for(var l=0; l <= topLinks.length - 1; l++){
-                            console.log(topLinks[l].classList.value);  // prints each class name to make sure it has them all
                             $("."+topLinks[l].classList.value).show(); // hides them all 
                         };
                     };
                     
                     function hideDivs() {
-                        'use strict';
-                        var moduleFramework = document.querySelectorAll(".moduleFramework");
+                        var moduleFramework = document.querySelectorAll(".moduleFramework");  //grab all module framework divs
                         for(var i=0; i <= moduleFramework.length-1; i++){
-                            if(moduleFramework[i]["id"] !== "moduleContents"){
+                            if(moduleFramework[i]["id"] !== "moduleContents"){  //on page load, for every div we collected, if not contents div, hide it...this allows all divs but contents to display on page landing
                                 $('#'+moduleFramework[i]["id"]).hide();
                             }
                         };
@@ -341,95 +331,79 @@
                     
                     function showDivs() {
                         'use strict';
-                        var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
-                        for(var i=0; i <= arr.length-1; i++){
-                            $(arr[i]).show();
+                        var moduleFramework = document.querySelectorAll(".moduleFramework");  //grab all module framework divs
+                        for(var i=0; i <= moduleFramework.length-1; i++){
+                            if(moduleFramework[i]["id"] !== "moduleContents"){  //on page load, for every div we collected, if not contents div, hide it...this allows all divs but contents to display on page landing
+                                $('#'+moduleFramework[i]["id"]).show();
+                            }
                         };
                     };
                     
+                    /*
+                    function comparingIds() {
+                        var buttonArray = [];
+                        var frameworkArray = [];
+                        var navButtons = document.querySelectorAll(".navButton"); //grab all elements w/ .navButton class (side navbar)
+                        var moduleFramework = document.querySelectorAll(".moduleFramework"); //grab all elements w/ moduleFramework class (main module content divs)
+                        for(var i=0; i <= moduleFramework.length-1; i++){ // iterate through moduleFramework
+                            var test = moduleFramework[i]["id"];          // grab each id string from moduleFramework elements
+                            var newId = navButtons[i]["id"].replace("show", "");  //take out the work show
+                            var newId = newId[0].toLowerCase() + newId.slice(1);      //and make first letter lower case so module div id's will match nav button ids
+                            buttonArray.push(newId);                              //add button array vals and framework array vals
+                            frameworkArray.push(test);
+                        };
+                        console.log(frameworkArray);
+                        console.log("array 2: " + buttonArray);
+                    };
+                    */    
+
                     function printPropName(e){
-                        console.log(e.currentTarget);
-                        //moduleFramework = document.querySelectorAll(".moduleFramework");
-                        //console.log(moduleFramework);
+                        var frameworkArray = [];
+                        var moduleFramework = document.querySelectorAll(".moduleFramework"); //grab all elements w/ moduleFramework class (main module content divs)
+                        var buttonId = e.currentTarget;  //takes even and grabs current target, usually button ID
+                        buttonId = buttonId["id"].replace("show", "");  //take the id name and remove "show"
+                        buttonId = buttonId[0].toLowerCase() + buttonId.slice(1); //lower the first character and concat to the rest of string.. now we get a lowercase ID from the nav buttons that matched module class div titles
+                        console.log("button ID: "+buttonId);
                         
-                    }
+                        for(var i=0; i <= moduleFramework.length-1; i++){ // iterate through moduleFramework divs
+                            frameworkArray.push(moduleFramework[i]["id"]);  //add id text to our array
+                        };
+                        
+                        $("#"+buttonId).show(); //for button clicked, use that ID text to show the div
+                        
+                        frameworkArray.forEach(function(arrItem) {  //for each item in the array
+                           if(arrItem !== buttonId){                //if the array item is NOT equal to the buttonId div id that is clicked, use that ID to close the div...
+                               $("#"+arrItem).hide();
+                           } 
+                        });
+                       
+                    };  //close printPropName
+                    
                     
                     /**WORKING TO GATHER DIVS EASILY, TESTING FOR NAV BUTTONS AND MODULE FRAMEWORK CLASS**/
                     navButtons = document.querySelectorAll(".navButton");  //grab all of the panel nav buttons
-                    //console.log(navButtons);
                     navButtons.forEach(button => button.addEventListener('click', printPropName)); //for each button, add click event listener to trigger printPropName
                     
                     
-                    hideContentLinks();
-                    hideDivs();
+                    hideContentLinks();  //hide content links
+                    hideDivs();  //initial div hiding on page load
+                    
                     
                     lwidth = window.screen.width;  //able to capture mobile screen w/ window.screen.width prop
                     //w = window.innerWidth;
                     if(lwidth === 320 || lwidth === 375){
-                    /*    
-                        var arr = ["#externalResources", "#workspace", "#exercises", "#miniProject"];
-                        for(var i=0; i <= arr.length-1; i++){
-                            $(arr[i]).show();
-                        };
-                        console.log(topLinks);
-                        for(var l=0; l <= topLinks.length - 1; l++){
-                        console.log(topLinks[l].classList.value);
-                        $("."+topLinks[l].classList.value).show();
-                        $("#asideCollapse").hide();
-                    };
-                    */
-                    //console.log(lwidth);
                     $("#asideCollapse").hide();
-                    /*$("#mainContent").hide();*/
                     alert("do you really want to live in mobile hell?");
                     showContentLinks();
                     showDivs();
-                    }
+                    };
                     
                    
                     /*this is for erics revision history button at top left of page*/
                     $("#page-history-button").click(function () {
                         $("#history").toggle(1000);
                     });
-                    
-                    /*these functions hide other divs and show others depending on butotn click*/
-                    $("#showModuleContents").click(function () {
-                        hideDivs();
-                        $("#moduleContents").show();
-                    });
-                    
-                    /*show resources*/
-                    $("#showExternalResources").click(function () {
-                        var arr = ["#moduleContents", "#workspace", "#exercises", "#miniProject"];
-                        for(var i=0; i <= arr.length-1; i++){
-                            $(arr[i]).hide();
-                        };
-                        $("#externalResources").show();
-                    });
-                    /*show workspace*/
-                    $("#showWorkspace").click(function () {
-                        var arr = ["#moduleContents", "#externalResources", "#exercises", "#miniProject"];
-                        for(var i=0; i <= arr.length-1; i++){
-                            $(arr[i]).hide();
-                        };
-                        $("#workspace").show();
-                    });
-                    /*show exercises*/
-                    $("#showExercises").click(function () {
-                        var arr = ["#moduleContents", "#externalResources", "#workspace", "#miniProject"];
-                        for(var i=0; i <= arr.length-1; i++){
-                            $(arr[i]).hide();
-                        };
-                        $("#exercises").show();
-                    });
-                    /*show miniproject*/
-                    $("#showMiniProject").click(function () {
-                         var arr = ["#moduleContents", "#externalResources", "#workspace", "#exercises"];
-                         for(var i=0; i <= arr.length-1; i++){
-                             $(arr[i]).hide();
-                         };
-                         $("#miniProject").show();
-                     });
+              
                     /*take us to homepage*/
                     $("#goHome").click(function () {
                         window.open("https://technologyrediscovery.net/", "_self"); 
