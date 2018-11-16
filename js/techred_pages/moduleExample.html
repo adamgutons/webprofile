@@ -28,7 +28,7 @@
         </div>
         
         <div class="mainContainer module" id="mainContent">
-            <img src="moduleStuff/header_hist_800x166.jpg" class="captioned" alt="frequency distribution" width="800px">
+            <img src="moduleStuff/header_hist_800x166.jpg" class="captioned" alt="frequency distribution" width="800">
 
             <div class="page-revision-history">
 
@@ -145,7 +145,6 @@
 
             <ul>
                 <li><a href="http://shiny.chemgrid.org/boxplotr/">Online box plot image creator <img class="ext" src="moduleStuff/ext.png"></a></li>
-moduleStuff
                 <li><a href="https://en.wikipedia.org/wiki/Descriptive_statistics">Descriptive statistics on Wikipedia <img class="ext" src="moduleStuff/ext.png"></a></li>
 
                 <li><a href="https://en.wikipedia.org/wiki/Standard_deviation">Standard deviation on Wikipedia<img class="ext" src="moduleStuff/ext.png"></a></li>
@@ -274,9 +273,9 @@ moduleStuff
 
             <h3>Sample outputs</h3>
             <p>A comparison of property values in Swissvale, PA and neighbor municipality called Edgewood</p>
-            <img src="moduleStuff/samplePropValueComparison.png" alt="spreadsheet examples" width="800px">
+            <img src="moduleStuff/samplePropValueComparison.png" alt="spreadsheet examples" width="800">
             <p>The set of spreadsheet tabs you might want to use</p>
-            <img src="moduleStuff/tabNamesForMiniProject.png" alt="spreadsheet examples" width="800px">
+            <img src="moduleStuff/tabNamesForMiniProject.png" alt="spreadsheet examples" width="800">
 
             <h3>Submission guide</h3>
             <ol>
@@ -308,11 +307,11 @@ moduleStuff
                      */
                     
                     /*working to grab all elements w/ back to contents so they can hide when not on mobile browser*/
-                    var topLinks = document.querySelectorAll('.backToTop');
+                    var topLinks = document.querySelectorAll('.backToTop'); // grabs all back to contents links at bottom of module divs 
                     console.log(topLinks.length); 
                     for(var l=0; l <= topLinks.length - 1; l++){
-                        console.log(topLinks[l].classList.value);
-                        $("."+topLinks[l].classList.value).hide();
+                        console.log(topLinks[l].classList.value);  // prints each class name to make sure it has them all
+                        $("."+topLinks[l].classList.value).hide(); // hides them all 
                     };
                     
                     function hideDivs() {
